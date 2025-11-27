@@ -1,6 +1,8 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
+#define SIGNALS
+
 // String used to delimit block outputs in the status.
 #define DELIMITER " | "
 
@@ -18,8 +20,9 @@
 
 // Define blocks for the status feed as X(icon, cmd, interval, signal).
 #define BLOCKS(X) \
-	X("Mem:", "free -h | awk '/^Mem/ { print $3\"/\"$2 }' | sed s/i//g", 30, 0) \
-	X("", "$HOME/dev/config/scripts/linux/batteryPercent.sh", 1, 0) \
+	X(" ", "free -h | awk '/^Mem/ { print $3\"/\"$2 }' | sed s/i//g", 30, 0) \
+	X(" ", "pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}'", 0, 10) \
+	X("", "$HOME/dev/config/scripts/linux/batteryPercent.sh", 0, 0) \
 	X("", "date '+%F %H:%M'", 60, 0)
 
 #endif  // CONFIG_H
