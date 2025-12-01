@@ -21,7 +21,7 @@
 // Define blocks for the status feed as X(icon, cmd, interval, signal).
 #define BLOCKS(X) \
 	X(" ", "pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}'", 0, 10) \
-	X("", "$HOME/dev/config/scripts/linux/batteryPercent.sh", 0, 0) \
-	X("", "date '+%F %a %H:%M'", 60, 0)
+	X("", "$HOME/dev/config/scripts/linux/batteryPercent.sh", 30, 5) \
+	X("󰃰 ", "date '+%F %a %H:%M'", 60, 0)
 
 #endif  // CONFIG_H
