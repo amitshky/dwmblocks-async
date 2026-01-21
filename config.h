@@ -20,9 +20,9 @@
 
 // Define blocks for the status feed as X(icon, cmd, interval, signal).
 #define BLOCKS(X) \
-	X("󰃝 ", "brightness_percent",  0,  9) \
-	X(" ", "volume_percent",      0,  10) \
-	X(" ", "battery_percent",     30, 5) \
-	X("󰃰 ", "date_time",               1,  8)
+	X("󰃝 ", "/usr/bin/env bash -c brightness_percent",  0,  9) \
+	X(" ", "/usr/bin/env bash -c volume_percent",      0,  10) \
+	X(" ", "/usr/bin/env bash -c battery_percent",     30, 5) \
+	X("󰃰 ", "/usr/bin/env bash -c date_time",               1,  8)
 
 #endif  // CONFIG_H
