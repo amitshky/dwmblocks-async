@@ -20,9 +20,9 @@
 
 // Define blocks for the status feed as X(icon, cmd, interval, signal).
 #define BLOCKS(X) \
-	X("󰃝 ", "$HOME/dev/config/scripts/linux/brightnessPercent.sh",  0,  9) \
-	X(" ", "$HOME/dev/config/scripts/linux/volumePercent.sh",      0,  10) \
-	X(" ", "$HOME/dev/config/scripts/linux/batteryPercent.sh",     30, 5) \
-	X("󰃰 ", "$HOME/dev/config/scripts/linux/date.sh",               1,  8)
+	X("󰃝 ", "brightness_percent",  0,  9) \
+	X(" ", "volume_percent",      0,  10) \
+	X(" ", "battery_percent",     30, 5) \
+	X("󰃰 ", "date_time",               1,  8)
 
 #endif  // CONFIG_H
